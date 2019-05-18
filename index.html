@@ -1,0 +1,100 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>Aplic. Web de jQuery Mobile</title>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+<script>
+$(document).on("pagecreate","#pageone",function(){
+	$("p").on("tap",function(){
+		$(this).hide();
+	});
+});
+    </script>
+
+</head> 
+<body> 
+
+<div data-role="page" id="page">
+	<div data-role="header">
+		<h1>Página uno</h1>
+	</div>
+	<div data-role="content">	
+		<ul data-role="listview">
+			<li><a href="#page2">Página dos</a></li>
+            <li><a href="#page3">Página tres</a></li>
+			<li><a href="#page4">Página cuatro</a></li>
+		</ul>		
+	</div>
+	<div data-role="footer">
+		<h4>Pie de página</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page2">
+	<div data-role="header">
+		<h1>Página dos</h1>
+	</div>
+	<div data-role="content">	
+		<h1> Hola Mundo</h1>
+
+<p id="texto">JavaScript pueden cambiar el estilo de un elemnto HTML.</p>
+
+<script>
+function myFuntion(){
+	document.getElementById("texto").style.fontSize="25px";
+	document.getElementById("texto").style.color="red";
+	document.getElementById("texto").style.background="yellow";}
+	</script>
+    
+    <button type="button" onClick="myFunction()"> Click Me </button>		
+	</div>
+	<div data-role="footer">
+		<h4>Pie de página</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page3">
+	<div data-role="header">
+		<h1>Página tres</h1>
+	</div>
+	<div data-role="content">	
+		<h1> segundo programa JavaScript</h1>
+<p> JavaScript piuede cambiar un elemento HTML: </p>
+<button type="button" onClick="myFunction()"> Da Click </button>
+
+<p id="demo"> Hola Mundo </p>
+
+<script>
+function myFunction(){
+	document.getElementById("demo").innerHTML = "Hello world:";
+}
+</script>		
+	</div>
+	<div data-role="footer">
+		<h4>Pie de página</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page4">
+<div data-role="header">
+<h1> the tap event</h1>
+</div>
+
+<div data-role="main" class="ui-content">
+<p> if you tap me, i will disappear.</p>
+<p> tap me away </p>
+<p> tap me too </p>
+
+
+<div data-role="footer">
+<h1> footer text</h1>
+</div>
+</div>
+
+</body>
+</html>
